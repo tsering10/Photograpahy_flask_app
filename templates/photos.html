@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<header class="w3-center w3-margin-bottom">
+  <p class="w3-xxlarge w3-serif">
+  <i>"A picture is worth a thousand words"</i></p>
+
+  <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle to view photos</button></p>
+</header>
+
+<!-- Photo Grid -->
+<div class="w3-row" id="myGrid" style="margin-bottom:128px">
+  <div class="w3-third">
+    <img src="{{url_for('static',filename='img/img1.jpg')}}" style="width:100%">
+    <img src="{{url_for('static',filename='img/img7.jpg')}}" style="width:100%">
+    <img src="{{url_for('static',filename='img/img2.jpg')}}" style="width:100%">
+    <img src="{{url_for('static',filename='img/img8.jpg')}}" style="width:100%">
+    <img src="{{url_for('static',filename='img/img3.jpg')}}" style="width:100%">
+    <img src="{{url_for('static',filename='img/img5.jpg')}}" style="width:100%">
+  </div>
+
+  <div class="w3-third">
+
+    <img src="{{url_for('static',filename='img/img13.jpg')}}" style="width:100%">
+    <img src="{{url_for('static',filename='img/img9.jpg')}}" style="width:100%">
+    <img src="{{url_for('static',filename='img/img10.jpg')}}" style="width:100%">
+    <img src="{{url_for('static',filename='img/img12.jpg')}}" style="width:100%">
+  </div>
+  <div class="w3-third">
+
+    <img src="{{url_for('static',filename='img/img14.jpg')}}" style="width:100%">
+    <img src="{{url_for('static',filename='img/img9.jpg')}}" style="width:100%">
+    <img src="{{url_for('static',filename='img/img15.jpg')}}" style="width:100%">
+    <img src="{{url_for('static',filename='img/img16.jpg')}}" style="width:100%">
+    <img src="{{url_for('static',filename='img/img17.jpg')}}" style="width:100%">
+    <img src="{{url_for('static',filename='img/img11.jpg')}}" style="width:100%">
+
+  </div>
+</div>
+
+<!-- End Page Content -->
+
+{% endblock %}

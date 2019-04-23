@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<title>{% block title %}{% endblock %} Tashi Tsering</title>
+
+{% block header %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+<!--<link rel="icon" href="https://img.icons8.com/bubbles/50/000000/camera.png" type="image/png"> -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+
+{% endblock %}
+
+<body>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="/" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Home</a>
+    <a href="/about" class="w3-bar-item w3-button w3-text-grey w3-hover-black">About</a>
+    <a href="/photos" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Photos</a>
+    <a href="/contact" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact</a>
+  </div>
+</nav>
+
+<!-- Header -->
+<div class="w3-opacity">
+<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+<div class="w3-clear"></div>
+</div>
+
+
+{% block content %}{% endblock %}
+
+<!-- Footer -->
+{%block footer%}
+
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-xlarge " style="margin-top:128px">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <p class="w3-medium">&copy; 2019 by Tashi Tsering</p>
+</footer>
+{% endblock %}
+
+
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else {
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+
+body,h1 {
+  font-family: 'Dancing Script', cursive;
+}
+
+img {
+  margin-bottom: -7px
+}
+
+.w3-row-padding img {
+  margin-bottom: 12px
+}
