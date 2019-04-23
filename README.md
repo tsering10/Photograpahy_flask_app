@@ -1,4 +1,4 @@
-# Photograpahy_flask_app
+# Photography_flask_app
 Flask web application for my photograph portfolio 
 
 # Getting Started
